@@ -16,29 +16,5 @@
 
   <body>
     <div id="app"></div>
-    
-    <script>
-      // Debug calendar events
-      document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(() => {
-          const calendar = document.querySelector('calendar-date');
-          if (calendar) {
-            console.log('Calendar found:', calendar);
-            
-            // Listen to all possible events
-            ['calendar-change', 'change', 'click', 'select', 'dateselect', 'date-change'].forEach(eventName => {
-              calendar.addEventListener(eventName, (e) => {
-                console.log(`Event: ${eventName}`, e);
-                console.log('Event detail:', e.detail);
-                console.log('Event target:', e.target);
-                console.log('Target value:', e.target.value);
-              });
-            });
-          } else {
-            console.log('Calendar not found');
-          }
-        }, 1000);
-      });
-    </script>
   </body>
 </html>
